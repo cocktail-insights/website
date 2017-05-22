@@ -59,10 +59,10 @@
             <div class="">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <div class=" carousel-caption text-center">
-                                <h1>Where <span> Design </span> Meets <span>Code</span></h1>
-                                <p>We make your imagination a reality</p>
+                        <div class="col-sm-12">
+                            <div class="carousel-caption">
+                                <h1 id="caption-h1">We </br><span class="element"></span></h1>
+                                <p id="caption-desc">We make your imagination a reality</p>
                                 <!--<p>
                                     <a class="btn btn-lg btn-primary" href="landing.html#" role="button">READ MORE</a>
                                     <a class="caption-link" href="landing.html#" role="button">Inspinia Theme</a>
@@ -154,7 +154,7 @@
             </div>
         </div>
         <div class="row features-block">
-            <div  class="row">
+            <div class="row">
                 <div id="" class="col-sm-offset-2 col-md-4 text-center">
                     <img class="s-icon1" src="img/landing/new/mobiweb.svg">
                     <h2>Web & Mobile Design</h2>
@@ -309,7 +309,9 @@
             </div>
             <div class="row features-block">
                 <div class="col-sm-4 text-center ">
-                    <a href="https://adgeekpro.com "><div class="p-holder text-center "><img class="projects " src="img/landing/new/logox.png "></div></a>
+                    <a href="https://adgeekpro.com ">
+                        <div class="p-holder text-center "><img class="projects " src="img/landing/new/logox.png "></div>
+                    </a>
                 </div>
                 <div class="col-sm-4 ">
 
@@ -341,8 +343,7 @@
                 </div>
                 <div class="col-lg-4 ">
                     <p class="text-color ">
-                        We are a dedicated team, committed to delivering
-                        the best to our clients.
+                        We are a dedicated team, committed to delivering the best to our clients.
                     </p>
                 </div>
             </div>
@@ -373,6 +374,7 @@
 
     <!-- Mainly scripts -->
     <script src="js/jquery-3.1.1.min.js "></script>
+    <script src="js/typed.js"></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js "></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js "></script>
@@ -436,6 +438,18 @@
 
         // Activate WOW.js plugin for animation on scrol
         new WOW().init();
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Typed.new(".element", {
+                strings: ["Build Elegant Software", "Build Web Apps", "Build Mobile Apps", "Design"],
+                typeSpeed: 30,
+                loop: true,
+                startDelay: 60,
+                backDelay: 2000
+            });
+        });
     </script>
 
 </body>
