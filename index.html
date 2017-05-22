@@ -380,7 +380,7 @@
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js "></script>
 
     <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js "></script>
+    <script src="js/main.js "></script>
     <script src="js/plugins/pace/pace.min.js "></script>
     <script src="js/plugins/wow/wow.min.js "></script>
 
@@ -408,13 +408,13 @@
             var docElem = document.documentElement,
                 header = document.querySelector('.navbar-default'),
                 didScroll = false,
-                changeHeaderOn = 200;
+                changeHeaderOn = 5;
 
             function init() {
                 window.addEventListener('scroll', function (event) {
                     if (!didScroll) {
                         didScroll = true;
-                        setTimeout(scrollPage, 250);
+                        setTimeout(scrollPage, 10);
                     }
                 }, false);
             }
