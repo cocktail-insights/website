@@ -7000,8 +7000,9 @@ body.landing-page {
 }
 .landing-page .header-back.one {
   background: url('../img/landing/new/banner.png');
-  background-size: 100%;
-  background-position-y: 15px;
+  background-size: 120%;
+  background-position-y: 20px;
+  background-position-x: -150px;
   background-repeat: no-repeat;
 }
 .landing-page .header-back.two {
