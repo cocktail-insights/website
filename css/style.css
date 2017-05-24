@@ -6999,7 +6999,7 @@ body.landing-page {
   width: 100%;
 }
 .landing-page .header-back.one {
-  background: url('../img/landing/new/banner.png');
+  background: url('../img/landing/new/bannerSVG.svg');
   background-size: 120%;
   background-position-y: 20px;
   background-position-x: -150px;
