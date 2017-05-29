@@ -236,6 +236,31 @@
     background-repeat: no-repeat;
 }
 
+#code-header {
+    background: url('../img/landing/new/t-banner2.svg');
+    background-position: 40% 20%;
+    background-size: 140%;
+    background-repeat: no-repeat;
+}
+
+
 #d-row3 {
     margin-top: 100px;
+}
+
+#canvas {
+    background-color: #ccddcc;
+    position: relative;
+}
+
+.ball {
+    background-color: black;
+    position: relative;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+	
+	#myModal .modal-dialog  {width:900px;}
+
 }

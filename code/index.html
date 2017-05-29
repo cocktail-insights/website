@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cocktail Insights | We Make Your Imagination A Reality</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/mycss.css" rel="stylesheet">
+    <link href="../css/hover.css" rel="stylesheet">
+</head>
+
+<body id="page-top" class="landing-page no-skin-config">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand btn-brand" href="../index.html">Cocktail Insights</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+            <!--<li data-target="#inSlider" data-slide-to="1"></li>-->
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-caption">
+                                <h1 id="caption-h1">CODE</h1>
+                                <p id="caption-desc">We live to code and we code to live</p>
+                                <!--<p>
+                                    <a class="btn btn-lg btn-primary" href="landing.html#" role="button">READ MORE</a>
+                                    <a class="caption-link" href="landing.html#" role="button">Inspinia Theme</a>
+                                </p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Set background for slide in css -->
+                <div id="code-header" class="header-back one"></div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section id="features" class="container services">
+        <div class="row">
+            <!--<div class="col-sm-12">
+                <h1>What Makes Us Unique</h1>
+            </div>-->
+            <div class="row">
+                <div id="d-desc2" class="col-md-6">
+                    <h2>We give design motion</h2>
+                    <p class="desc">
+                        Using "Atomic" design principle, we create user interfaces from parts to whole rather from whole to part.
+                        Each individual component is meticulously designed and then put together to create an elegant user interface
+                    </p>
+                </div>
+                <div class="col-md-6 text-center wow fadeInLeft animated">
+                    <div id="canvas"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg ">
+                    <p><strong>&copy; 2017 Cocktail Insights Inc</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mainly scripts -->
+    <script src="../js/jquery-3.1.1.min.js "></script>
+    <script src="../js/typed.js"></script>
+    <script src="../js/bootstrap.min.js "></script>
+    <script src="../js/plugins/metisMenu/jquery.metisMenu.js "></script>
+    <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js "></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="../js/main.js "></script>
+    <script src="../js/plugins/wow/wow.min.js "></script>
+    <script src="../js/ball.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('body').scrollspy({
+                target: '.navbar-fixed-top',
+                offset: 80
+            });
+
+            // Page scrolling feature
+            $('a.page-scroll').bind('click', function (event) {
+                var link = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(link.attr('href')).offset().top - 50
+                }, 500);
+                event.preventDefault();
+                $("#navbar ").collapse('hide');
+            });
+        });
+
+        var cbpAnimatedHeader = (function () {
+            var docElem = document.documentElement,
+                header = document.querySelector('.navbar-default'),
+                didScroll = false,
+                changeHeaderOn = 5;
+
+            function init() {
+                window.addEventListener('scroll', function (event) {
+                    if (!didScroll) {
+                        didScroll = true;
+                        setTimeout(scrollPage, 10);
+                    }
+                }, false);
+            }
+
+            function scrollPage() {
+                var sy = scrollY();
+                if (sy >= changeHeaderOn) {
+                    $(header).addClass('navbar-scroll')
+                } else {
+                    $(header).removeClass('navbar-scroll')
+                }
+                didScroll = false;
+            }
+
+            function scrollY() {
+                return window.pageYOffset || docElem.scrollTop;
+            }
+            init();
+
+        })();
+
+        // Activate WOW.js plugin for animation on scrol
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

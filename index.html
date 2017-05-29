@@ -17,6 +17,10 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/mycss.css" rel="stylesheet">
@@ -59,11 +63,7 @@
                         <div class="col-sm-12">
                             <div class="carousel-caption">
                                 <h1 id="caption-h1">We </br><span class="element"></span></h1>
-                                <p id="caption-desc">We make your imagination a reality</p>
-                                <!--<p>
-                                    <a class="btn btn-lg btn-primary" href="landing.html#" role="button">READ MORE</a>
-                                    <a class="caption-link" href="landing.html#" role="button">Inspinia Theme</a>
-                                </p>-->
+                                <p id="caption-desc">We make your ideas a reality</p>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,6 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 <h1>What Makes Us Unique</h1>
-
             </div>
             <div class="row">
                 <div class="col-md-4 text-center wow fadeInLeft animated">
@@ -108,6 +107,105 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Tell us a little bit about your project</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                        <h1>Basic Details</h1>
+                        <fieldset>
+
+                            <div class="row">
+                                <div class="col-md-offset-2 col-lg-8">
+                                    <h2>Basic Details</h2>
+                                    <div class="form-group">
+                                        <select name="projectType" type="text" class="form-control required">
+                                <option value="Website">Website</option>
+                                <option value="Web Application">Web Application</option>
+                                <option value="Mobile Application">Mobile Application</option>
+                                <option value="Enterprise Software">Enterprise Software</option>
+                                <option value="Product/Coporate branding">Product/Coporate branding</option>
+                                <option value="IT Consultation">IT Consultation</option>
+                            </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Project Name*</label>
+                                        <input id="projectName" name="projectName" placeholder="eg: BillPay" type="text" class="form-control required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Project Details *</label>
+                                        <textarea id="projectDetails" name="projectDetails" class="form-control required"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <h1>Budget</h1>
+                        <fieldset>
+
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8">
+                                    <h2>Duration & Budget</h2>
+                                    <div class="form-group">
+                                        <label>Project Duration (in months) *</label>
+                                        <input type="number" id="duration" name="duration" placeholder=" eg: 3" type="text" class="form-control required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Your Budget *</label>
+                                        <select name="budget" type="text" class="form-control required">
+                                <option value="0 - 5">$0 - $5k</option>
+                                <option value="5 - 10">$5k - $10k</option>
+                                <option value="10 - 20">$10k - $20k</option>
+                                <option value="20 - 50">$20k - $50k</option>
+                                <option value=">50">Above $50k</option>
+                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1>How do we contact you</h1>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-8">
+                                    <h2>How do we contact you</h2>
+                                    <div class="form-group">
+                                        <label>Name *</label>
+                                        <input id="name" name="name" placeholder="John Doe" type="text" class="form-control required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone *</label>
+                                        <input id="phone-number" name="phoneNumber" placeholder="+0 0000 0000" type="text" class="form-control required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email </label>
+                                        <input id="email" name="email" placeholder="example@example.com" type="email" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <h1>Finish</h1>
+                        <fieldset>
+                            <div class="row text-center">
+                                <div class="col-md-offset-2 col-md-8">
+                                    <h2>After Submitting Your Project</h2>
+                                    <p>A project manager will contact you in the next 24hrs</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <section class="container features">
         <div class="row">
@@ -139,7 +237,7 @@
                         and tested technologies to develop softwares that does not only look and feel great but also checks
                         all the boxes when it comes perfomance, reliability and speed.
                     </p>
-                    <a class="l-more">Learn More</a>
+                    <a href="" class="l-more">Learn More</a>
                 </div>
             </div>
         </div>
@@ -173,7 +271,7 @@
                 </div>
             </div>
             <div id="btn-row" class="row text-center">
-                <a href="" class="btn btn-primary ">Start a project</a>
+                <a href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Start a project</a>
             </div>
 
         </div>
@@ -222,79 +320,11 @@
             </div>
         </div>
         <div id="btn-row" class="row text-center">
-            <a href="" class="btn btn-primary ">Start a project</a>
+            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Start a project</a>
         </div>
     </section>
 
-    <!--<section id="team" class="gray-section team">
-        <div class="container">
-            <div class="row m-b-lg">
-                <div class="col-lg-12 text-center">
-                    <div class="navy-line"></div>
-                    <h1>Our Team</h1>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 wow fadeInLeft">
-                    <div class="team-member">
-                        <img src="img/landing/avatar3.jpg" class="img-responsive img-circle img-small" alt="">
-                        <h4><span class="navy">Amelia</span> Smith</h4>
-                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta
-                            sensibus. </p>
-                        <ul class="list-inline social-icon">
-                            <li><a href="landing.html#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="landing.html#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="landing.html#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member wow zoomIn">
-                        <img src="img/landing/avatar1.jpg" class="img-responsive img-circle" alt="">
-                        <h4><span class="navy">John</span> Novak</h4>
-                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta
-                            sensibus.
-                        </p>
-                        <ul class="list-inline social-icon">
-                            <li><a href="landing.html#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="landing.html#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="landing.html#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4 wow fadeInRight">
-                    <div class="team-member">
-                        <img src="img/landing/avatar2.jpg" class="img-responsive img-circle img-small" alt="">
-                        <h4><span class="navy">Peter</span> Johnson</h4>
-                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta
-                            sensibus.
-                        </p>
-                        <ul class="list-inline social-icon">
-                            <li><a href="landing.html#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="landing.html#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="landing.html#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis
-                        ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
+
 
     <section class="project-section" style="margin-top: 0">
         <div class="container">
@@ -375,10 +405,21 @@
     <script src="js/bootstrap.min.js "></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js "></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js "></script>
+    
+
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/steps/jquery.steps.min.js"></script>
+
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
 
     <!-- Custom and plugin javascript -->
     <script src="js/main.js "></script>
+    <script src="js/myjs.js "></script>
     <script src="js/plugins/wow/wow.min.js "></script>
+
+    <!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
 
 
     <script>
@@ -435,7 +476,7 @@
         // Activate WOW.js plugin for animation on scrol
         new WOW().init();
     </script>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             Typed.new(".element", {
@@ -444,6 +485,77 @@
                 loop: true,
                 startDelay: 60,
                 backDelay: 2000
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            //$("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex) {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex) {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18) {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex) {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex) {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3) {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                errorPlacement: function (error, element) {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
             });
         });
     </script>
